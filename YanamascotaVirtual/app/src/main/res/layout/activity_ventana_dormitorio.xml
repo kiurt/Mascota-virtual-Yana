@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dormitorio"
+    tools:context=".ventanaDormitorio">
+
+    <!-- Superposición semitransparente -->
+    <View
+        android:id="@+id/overlayView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/black"
+        android:alpha="0.0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/gata"
+        android:layout_width="224dp"
+        android:layout_height="272dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.527"
+        app:srcCompat="@drawable/yanabocaabierta" />
+
+    <ImageView
+        android:id="@+id/btnComedor"
+        android:layout_width="114dp"
+        android:layout_height="112dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/botoncomedor" />
+
+    <ImageView
+        android:id="@+id/btnDormitorio"
+        android:layout_width="111dp"
+        android:layout_height="108dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/botondormitorio" />
+
+    <ImageView
+        android:id="@+id/btnDucha"
+        android:layout_width="113dp"
+        android:layout_height="112dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnComedor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/botonducha" />
+
+    <ImageView
+        android:id="@+id/btnEstudio"
+        android:layout_width="113dp"
+        android:layout_height="112dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnDormitorio"
+        app:layout_constraintStart_toEndOf="@+id/btnComedor"
+        app:srcCompat="@drawable/botonestudio" />
+
+    <ImageView
+        android:id="@+id/btnJuegos"
+        android:layout_width="114dp"
+        android:layout_height="114dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnDormitorio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/botonsaladejuegos" />
+
+    <ImageView
+        android:id="@+id/btnJugar"
+        android:layout_width="108dp"
+        android:layout_height="107dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnEstudio"
+        app:layout_constraintEnd_toStartOf="@+id/btnJuegos"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toEndOf="@+id/btnDucha"
+        app:srcCompat="@drawable/almohada" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="71dp"
+        android:layout_height="72dp"
+        android:progressDrawable="@drawable/custom_progress_bar"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/btnJuegos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.937"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
